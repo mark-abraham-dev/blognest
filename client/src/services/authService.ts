@@ -1,7 +1,7 @@
 import axios from "axios";
 import { AuthResponse, User } from "../types";
 
-const API_URL = "http://localhost:5000/auth";
+const API_URL = `${process.env.REACT_APP_BASE_URL}/auth`;
 
 export const signup = (user: User) => {
   return axios.post(`${API_URL}/signup`, user);
