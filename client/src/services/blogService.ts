@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Blog } from "../types";
 
-const API_URL = "http://localhost:5000/blog";
+const API_URL = `${process.env.REACT_APP_BASE_URL}/blog`;
+
 const getAuthHeader = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
 });
